@@ -3,7 +3,7 @@
 
     <label for="time_input" class="form-label">Time Spent</label>
 
-    <input type="email" class="form-control" [ngClass]="{'is-invalid': _calculator.InvalidInput}" id="time_input"
+    <input type="text" class="form-control" [ngClass]="{'is-invalid': _calculator.InvalidInput}" id="time_input"
       name="time_input" [(ngModel)]="timeInput" (ngModelChange)="onTextChange()" (keydown.enter)="onEnterClicked()"
       (blur)="onInputBlur()">
     <div *ngIf="_calculator.InvalidInput" class="invalid-feedback">
