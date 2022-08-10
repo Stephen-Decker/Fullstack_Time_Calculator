@@ -8,13 +8,13 @@ import { ClipboardService } from 'ngx-clipboard';
 })
 export class AppComponent implements OnInit {
 
-  title = 'FullstackTimeCulculator';
+  title = 'Fullstack_Time_Culculator';
   developmentDayInHours: number = 6;
 
-  timeInput: string;
-  timeInputInHours: number;
+  timeInput: string = '';
+  timeInputInHours: number = -1;
 
-  outputTimeInHours: number;
+  outputTimeInHours: number = -1;
   invalidTimeInput: boolean = false;
 
   ngOnInit(): void {
