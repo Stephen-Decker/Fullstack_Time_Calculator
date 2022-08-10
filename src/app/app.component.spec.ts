@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Fullstack_Time_Culculator'`, () => {
+  it(`should have as title 'Fullstack_Time_Calculator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Fullstack_Time_Culculator');
+    expect(app.title).toEqual('Fullstack_Time_Calculator');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Fullstack_Time_Culculator app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Fullstack_Time_Calculator app is running!');
   });
 });

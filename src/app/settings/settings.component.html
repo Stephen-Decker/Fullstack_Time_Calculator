@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12 mx-auto">
+    <div class="mb-3">
+      <label for="hoursInDay" class="form-label">Hours In A Day</label>
+      <input type="number" step="1" min="1" max="9" class="form-control" id="hoursInDay" name="hoursInDay"
+        [(ngModel)]="settings.FullDayTime">
+    </div>
+    <!-- <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div> -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 mx-auto">
+    <button class="btn btn-secondary float-end" (click)="onSaveClicked()">Save Settings</button>
+  </div>
+</div>

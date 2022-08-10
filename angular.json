@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Fullstack_Time_Culculator": {
+    "Fullstack_Time_Calculator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/fullstack-time-calculator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Fullstack_Time_Culculator:build:production"
+              "browserTarget": "Fullstack_Time_Calculator:build:production"
             },
             "development": {
-              "browserTarget": "Fullstack_Time_Culculator:build:development"
+              "browserTarget": "Fullstack_Time_Calculator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Fullstack_Time_Culculator:build"
+            "browserTarget": "Fullstack_Time_Calculator:build"
           }
         },
         "test": {

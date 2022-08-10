@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12 mx-auto">
+
+    <label for="time_input" class="form-label">Time Spent</label>
+
+    <input type="email" class="form-control" [ngClass]="{'is-invalid': _calculator.InvalidInput}" id="time_input"
+      name="time_input" [(ngModel)]="timeInput" (ngModelChange)="onTextChange()" (keydown.enter)="onEnterClicked()"
+      (blur)="onInputBlur()">
+    <div *ngIf="_calculator.InvalidInput" class="invalid-feedback">
+      Input format is incorrect, please follow the correct format e.g. '1d 3h 30m' or '1.5'
+    </div>
+
+    <p *ngIf="!_calculator.InvalidInput && _calculator.TimeInHours > 0">
+      Input Time in Hours : <br>
+      {{_calculator.TimeInHours | number}} hours
+    </p>
+  </div>
+</div>
+
+<div class="row" *ngIf="!_calculator.InvalidInput && _calculator.OutputTimeInHours > 0">
+  <div class="col-md-6 col-sm-12 mx-auto">
+    <p>
+      Time to record is : <br>
+      <span class="output-time-hours">{{_calculator.OutputTimeInHours | number}} hours </span>
+    </p>
+    <button class="btn btn-secondary" (click)="onOutputTimeClicked()">Copy to Clipboard</button>
+  </div>
+</div>
