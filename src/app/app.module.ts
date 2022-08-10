@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { ClipboardModule } from 'ngx-clipboard';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,6 @@ import { ClipboardModule } from 'ngx-clipboard';
     ClipboardModule
   ],
   providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
